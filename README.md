@@ -11,14 +11,14 @@ These instructions will get you a copy of the project up and running on your loc
 * Install latest version of node from: [I'm the latest Node](https://nodejs.org/dist/v8.11.1/node-v8.11.1-x64.msi)
 * mock API can be found here:
 ```
-https://demo0444860.mockable.io/getItems
+## my back end api
 ```
 ### Installing
 
 * First clone the repository
 
 ```
-git clone https://github.com/saranshbansal/food-order-app-reactjs.git
+https://github.com/tanishasarawgi98/FoodDelivery.git
 ```
 
 * Then go to the local directory and run below commands
@@ -43,7 +43,7 @@ http://localhost:3000
 
 ## Authors
 
-* **Saransh Bansal**
+* **Tanisha Sarawgi**
 
 See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
 

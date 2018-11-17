@@ -2,9 +2,11 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import * as actions from './action';
+import Address from './../Address/address'
 
 const initialstate = {
-    checkoutAlert: false
+    checkoutAlert: false,
+    showAddress:false
 };
 class Cart extends Component {
 
@@ -15,9 +17,17 @@ class Cart extends Component {
 
     checkout = () => {
         this.setState({
-            checkoutAlert: true
+            checkoutAlert: true,
+            showAddress:false
         });
         this.props.checkoutCurrentOrder();
+    }
+
+    submitAddress = () => {
+        this.setState({
+            showAddress: true,
+            checkoutAlert: false
+        })
     }
 
     removeItemFromCart = (idx) => {
@@ -68,9 +78,10 @@ class Cart extends Component {
                         <div className="cart-total">
                             {'Total: ₹' + total}
                         </div>
-                        <button onClick={e => this.checkout()}>CHECKOUT</button>
+                        <button onClick={e => this.submitAddress()}>Give Address</button>
                     </div>
                 )}
+                {this.state.showAddress && <Address onCheckout={this.checkout}/>}
                 {this.state.checkoutAlert && (
                     <div className="cart-container">
                         <div className="success">

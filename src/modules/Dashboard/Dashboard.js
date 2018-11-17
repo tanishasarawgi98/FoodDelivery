@@ -52,4 +52,4 @@ function mapDispatchToProps(dispatch) {
     }, dispatch);
 }
 
-export default connect(null, mapDispatchToProps)(Dashboard);
+export default  connect(null, mapDispatchToProps)(Dashboard);
